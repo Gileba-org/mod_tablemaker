@@ -15,11 +15,11 @@ jobs:
         uses: papeloto/action-zip@v1
         with:
           files: src/
-          dest: mod_tablemakerforcsv.zip
+          dest: mod_tablemaker.zip
       - name: Create release with zip-file
         uses: softprops/action-gh-release@v1
         with:
-          files: mod_tablemakerforcsv.zip
+          files: mod_tablemaker.zip
       - name: Deploy update server
         uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
         with:
