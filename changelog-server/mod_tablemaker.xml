@@ -4,8 +4,8 @@
 		<element>mod_tablemaker</element>
 		<type>module</type>
 		<version>1.0.0</version>
-		<fix>
+		<note>
 			<item>First release under a new name</item>
-		</fix>
+		</note>
 	</changelog>
 </changelogs>
