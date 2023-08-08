@@ -10,7 +10,7 @@
 		<client>site</client>
 		<downloads>
 			<downloadurl type="full" format="zip">
-				https://gileba.be/index.php?option=com_osmembership&amp;task=download_update_package&amp;document_id=1</downloadurl>
+				https://gileba.be/index.php?option=com_osmembership&amp;task=download_update_package&amp;document_id=3</downloadurl>
 		</downloads>
 		<tags>
 			<tag>stable</tag>
