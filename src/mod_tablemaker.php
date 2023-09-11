@@ -34,6 +34,7 @@ $pagalign = $params->get("pagalign");
 $paglink_bg = $params->get("paglink_bg");
 $paglink_color = $params->get("paglink_color");
 $paglink_active = $params->get("paglink_active");
+$paglink_active_color = $params->get("paglink_active_color");
 $paglink_hoverbg = $params->get("paglink_hoverbg");
 $paglink_hovercolor = $params->get("paglink_hovercolor");
 $moduleclass_sfx = "";
