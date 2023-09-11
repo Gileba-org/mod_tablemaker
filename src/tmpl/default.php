@@ -143,7 +143,8 @@ if (!empty($fileurl)) {
 
 		echo '<table class="csvtable' . $moduleclass_sfx;
 		echo $sortable ? " sortable" : "";
-		echo '" id="csvtable">';
+		echo $lookup ? " id='csvtable'" : "";
+		echo '">';
 
 		$j = 0;
 		if (!empty($captions)) {
