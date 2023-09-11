@@ -86,6 +86,9 @@ margin:5px;
 background:" .
 		$paglink_active .
 		";
+color:" .
+		$pagelink_active_color .
+		";
 }
 #csvpagination a:hover{
 background:" .

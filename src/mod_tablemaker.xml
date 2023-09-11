@@ -122,6 +122,9 @@
         <field name="paglink_active" default="#008000" type="color"
           label="MOD_TABLEMAKER_ACTIVE_LABEL" description="MOD_TABLEMAKER_ACTIVE_DESC"
           showon="pagination:1" />
+        <field name="paglink_active_color" default="#ffffff" type="color"
+          label="MOD_TABLEMAKER_ACTIVE_COLOR_LABEL" description="MOD_TABLEMAKER_ACTIVE_COLOR_DESC"
+          showon="pagination:1" />
         <field name="paglink_hoverbg" default="#CCC" type="color"
           label="MOD_TABLEMAKER_HOVERBG_LABEL" description="MOD_TABLEMAKER_HOVERBG_DESC"
           showon="pagination:1" />
