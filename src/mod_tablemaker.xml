@@ -35,19 +35,19 @@
           label="MOD_TABLEMAKER_FILE_LABEL" description="MOD_TABLEMAKER_FILE_DESC" />
         <field name="separator" type="text" default="," label="MOD_TABLEMAKER_SEPARATOR_LABEL"
           description="MOD_TABLEMAKER_SEPARATOR_DESC" />
-        <field name="min_char" type="text" default="1" label="MOD_TABLEMAKER_MINCHAR_LABEL"
-          description="MOD_TABLEMAKER_MINCHAR_DESC" />
-        <field name="caption" type="textarea" rows="3" cols="40"
-          label="MOD_TABLEMAKER_CAPTION_LABEL" description="MOD_TABLEMAKER_CAPTION_DESC" />
         <field name="pretext" type="editor" filter="safehtml" label="MOD_TABLEMAKER_PRETEXT_LABEL"
           description="MOD_TABLEMAKER_PRETEXT_DESC" />
         <field name="posttext" type="editor" filter="safehtml" label="MOD_TABLEMAKER_POSTTEXT_LABEL"
           description="MOD_TABLEMAKER_POSTTEXT_DESC" />
+        <field name="caption" type="textarea" rows="3" cols="40"
+          label="MOD_TABLEMAKER_CAPTION_LABEL" description="MOD_TABLEMAKER_CAPTION_DESC" />
         <field name="lookup" type="radio" default="0" label="MOD_TABLEMAKER_LOOKUP_LABEL"
-          description="MOD_TABLEMAKER_LOOKUP_DESC" class="btn-group btn-group-yesno">
-          <option value="1">JYES</option>
-          <option value="0">JNO</option>
-        </field>
+            description="MOD_TABLEMAKER_LOOKUP_DESC" class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+          </field>
+        <field name="min_char" type="text" default="1" label="MOD_TABLEMAKER_MINCHAR_LABEL"
+            description="MOD_TABLEMAKER_MINCHAR_DESC" showon="lookup:1" />
         <field name="sortable" type="radio" default="0" label="MOD_TABLEMAKER_SORTABLE_LABEL"
           description="MOD_TABLEMAKER_SORTABLE_DESC" class="btn-group btn-group-yesno">
           <option value="1">JYES</option>
