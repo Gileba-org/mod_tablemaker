@@ -1,0 +1,20 @@
+<updates>
+	<update>
+		<name>Tablemaker</name>
+		<description>A module to create html table from CSV file</description>
+		<element>mod_tablemaker</element>
+		<type>module</type>
+		<version>1.0.0</version>
+		<infourl title="Tablemaker">https://github.com/Gileba-org/mod_tablemaker</infourl>
+		<changelogurl>https://gileba.be/changelogs/mod_tablemaker.xml</changelogurl>
+		<client>site</client>
+		<downloads>
+			<downloadurl type="full" format="zip">
+				https://gileba.be/index.php?option=com_osmembership&amp;task=download_update_package&amp;document_id=3</downloadurl>
+		</downloads>
+		<tags>
+			<tag>stable</tag>
+		</tags>
+		<targetplatform name="joomla" version="((3\.(23456789|10))|(4\.[0123456789]))" />
+	</update>
+</updates>
