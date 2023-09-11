@@ -13,7 +13,7 @@ use Joomla\Filter\InputFilter;
 
 // Custom JS
 if ($pagination) {
-	$script = "jQuery('document').ready(function(){pagination(" . $row_num . ");});";
+	$script = "jQuery('document').ready(function(){pagination(" . $row_num . ", " . $module->id . ");});";
 }
 
 // Custom CSS
@@ -73,7 +73,9 @@ font:" .
 		$oddbg .
 		";
 }
-#csvpagination a{
+#csvpagination_" .
+		$module->id .
+		" a{
 background:" .
 		$paglink_bg .
 		";
@@ -82,7 +84,9 @@ color:" .
 		";
 margin:5px;
 }
-#csvpagination a.active{
+#csvpagination_" .
+		$module->id .
+		" a.active{
 background:" .
 		$paglink_active .
 		";
@@ -90,7 +94,9 @@ color:" .
 		$pagelink_active_color .
 		";
 }
-#csvpagination a:hover{
+#csvpagination_" .
+		$module->id .
+		" a:hover{
 background:" .
 		$paglink_hoverbg .
 		";
@@ -98,7 +104,9 @@ color:" .
 		$paglink_hovercolor .
 		";
 }
-#csvpagination{
+#csvpagination_" .
+		$module->id .
+		"{
 text-align:" .
 		$pagalign .
 		";}";
@@ -132,18 +140,23 @@ if (!empty($fileurl)) {
 	if (file_exists($fileurl)) {
 		$file = fopen($fileurl, "r");
 		if ($lookup) {
-			echo '<input type="text" id="csvlookup" onkeyup="lookuptable(' .
+			echo '<input type="text" id="csvlookup_' .
+				$module->id .
+				'" onkeyup="lookuptable(' .
 				$row_num .
 				"," .
 				$min_char .
-				')" placeholder="' .
+				"," .
+				$module->id .
+				")" .
+				'" placeholder="' .
 				Text::_("MOD_TABLEMAKER_SEARCHFOR") .
 				'"><br /><br />';
 		}
 
 		echo '<table class="csvtable' . $moduleclass_sfx;
 		echo $sortable ? " sortable" : "";
-		echo $lookup ? " id='csvtable'" : "";
+		echo $lookup ? '" id="csvtable_' . $module->id . '"' : "";
 		echo '">';
 
 		$j = 0;
@@ -176,7 +189,7 @@ if (!empty($fileurl)) {
 		echo "</tbody></table>";
 
 		if ($pagination) {
-			echo '<div id="csvpagination"></div>';
+			echo '<div id="csvpagination_' . $module->id . '"></div>';
 		}
 
 		fclose($file);
