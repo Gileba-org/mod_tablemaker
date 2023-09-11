@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" method="upgrade" client="site">
+<extension type="module" method="upgrade" client="site" version="4.0">
   <name>Tablemaker</name>
   <author>Gileba</author>
   <copyright>(C) 2022 Gileba; (C) 2018 Mostafa Shahiri</copyright>
