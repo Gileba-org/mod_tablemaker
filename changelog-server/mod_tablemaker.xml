@@ -3,6 +3,25 @@
 	<changelog>
 		<element>mod_tablemaker</element>
 		<type>module</type>
+		<version>1.0.1</version>
+		<addition>
+			<item>Added option to set the color of the active pagination item (previously only the backgroundcolor could be set).</item>
+		</addition>
+		<change>
+			<item>The field to set the minimum number of characters for a lookup in the table is now placed under the option to activate the lookup. It will only show when that option is enabled.</item>
+		</change>
+		<fix>
+			<item>All ID attributes now contain the ID of the module to be unique in case the module is used more than once on a page. This fixes a problem where lookup and pagination were not able to perform correctly when two or more modules are rendered on the same page.</item>
+			<item>CSS ID-attribute 'csvtable' is only needed when the options lookup or pagination are enabled.</item>
+			<item>Added version attribute to the manifest-file of the module.</item>
+		</fix>
+		<note>
+			<item>Some changes in this version might not be backwards compatible with your custom CSS-styling. Check your custom CSS if you have used an id-attribute for styling this module (which is never recommended). All id-attributes have now changed to be unique in a DOM, as per definition.</item>
+		</note>
+	</changelog>
+	<changelog>
+		<element>mod_tablemaker</element>
+		<type>module</type>
 		<version>1.0.0</version>
 		<note>
 			<item>First release under a new name</item>
