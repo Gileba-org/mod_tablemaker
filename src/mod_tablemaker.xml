@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" method="upgrade" client="site">
+<extension type="module" method="upgrade" client="site" version="4.0">
   <name>Tablemaker</name>
   <author>Gileba</author>
   <copyright>(C) 2022 Gileba; (C) 2018 Mostafa Shahiri</copyright>
   <license>GNU/GPL</license>
   <authorEmail>info@gileba.be</authorEmail>
   <authorUrl>www.gileba.be</authorUrl>
-  <version>1.0.0</version>
-  <creationDate>2023-08-27</creationDate>
+  <version>1.0.1</version>
+  <creationDate>2023-09-11</creationDate>
   <description>This module creates a table from a CSV file. The module reads the content of a CSV
     file and makes an html table for it. Forked from 'Tablemaker for CSV' by Mostafa Shahiri
     (https://github.com/mostafa272/TableMakerforCSV)</description>
@@ -35,8 +35,6 @@
           label="MOD_TABLEMAKER_FILE_LABEL" description="MOD_TABLEMAKER_FILE_DESC" />
         <field name="separator" type="text" default="," label="MOD_TABLEMAKER_SEPARATOR_LABEL"
           description="MOD_TABLEMAKER_SEPARATOR_DESC" />
-        <field name="min_char" type="text" default="1" label="MOD_TABLEMAKER_MINCHAR_LABEL"
-          description="MOD_TABLEMAKER_MINCHAR_DESC" />
         <field name="caption" type="textarea" rows="3" cols="40"
           label="MOD_TABLEMAKER_CAPTION_LABEL" description="MOD_TABLEMAKER_CAPTION_DESC" />
         <field name="pretext" type="editor" filter="safehtml" label="MOD_TABLEMAKER_PRETEXT_LABEL"
@@ -44,10 +42,12 @@
         <field name="posttext" type="editor" filter="safehtml" label="MOD_TABLEMAKER_POSTTEXT_LABEL"
           description="MOD_TABLEMAKER_POSTTEXT_DESC" />
         <field name="lookup" type="radio" default="0" label="MOD_TABLEMAKER_LOOKUP_LABEL"
-          description="MOD_TABLEMAKER_LOOKUP_DESC" class="btn-group btn-group-yesno">
-          <option value="1">JYES</option>
-          <option value="0">JNO</option>
-        </field>
+            description="MOD_TABLEMAKER_LOOKUP_DESC" class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+          </field>
+        <field name="min_char" type="text" default="1" label="MOD_TABLEMAKER_MINCHAR_LABEL"
+            description="MOD_TABLEMAKER_MINCHAR_DESC" showon="lookup:1" />
         <field name="sortable" type="radio" default="0" label="MOD_TABLEMAKER_SORTABLE_LABEL"
           description="MOD_TABLEMAKER_SORTABLE_DESC" class="btn-group btn-group-yesno">
           <option value="1">JYES</option>
@@ -121,6 +121,9 @@
           showon="pagination:1" />
         <field name="paglink_active" default="#008000" type="color"
           label="MOD_TABLEMAKER_ACTIVE_LABEL" description="MOD_TABLEMAKER_ACTIVE_DESC"
+          showon="pagination:1" />
+        <field name="paglink_active_color" default="#ffffff" type="color"
+          label="MOD_TABLEMAKER_ACTIVE_COLOR_LABEL" description="MOD_TABLEMAKER_ACTIVE_COLOR_DESC"
           showon="pagination:1" />
         <field name="paglink_hoverbg" default="#CCC" type="color"
           label="MOD_TABLEMAKER_HOVERBG_LABEL" description="MOD_TABLEMAKER_HOVERBG_DESC"
