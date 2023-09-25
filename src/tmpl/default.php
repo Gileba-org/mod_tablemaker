@@ -91,7 +91,7 @@ background:" .
 		$paglink_active .
 		";
 color:" .
-		$pagelink_active_color .
+		$paglink_active_color .
 		";
 }
 #csvpagination_" .
