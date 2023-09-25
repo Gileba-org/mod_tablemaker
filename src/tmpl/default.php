@@ -121,6 +121,8 @@ if ($styling) {
 	$document->addStyleDeclaration($style);
 }
 if ($lookup || $pagination) {
+	$wa = $document->getWebAssetManager();
+	$wa->enableAsset("jquery-noconflict");
 	$document->addScript("modules/mod_tablemaker/js/jquery.dataTables.min.js");
 }
 $sort = "";
