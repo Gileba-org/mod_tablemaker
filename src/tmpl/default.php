@@ -121,12 +121,17 @@ if ($styling) {
 	$document->addStyleDeclaration($style);
 }
 if ($lookup || $pagination) {
-	$wa = $document->getWebAssetManager();
-	$wa->enableAsset("jquery-noconflict");
+	// TODO: Remove check as it's no longer needed once we drop support for J3
+	if (JVERSION >= 4) {
+		$wa = $document->getWebAssetManager();
+		$wa->useScript("jquery-noconflict");
+	}
+	// TODO: Should go into the WebAsset once we drop support for J3
 	$document->addScript("modules/mod_tablemaker/js/jquery.dataTables.min.js");
 }
 $sort = "";
 if ($sortable) {
+	// TODO: Should go into the WebAsset once we drop support for J3
 	$document->addScript("modules/mod_tablemaker/js/tablesort.js");
 	$sort = ' class="sortable"';
 }
