@@ -9,7 +9,7 @@ defined("_JEXEC") or die();
 use Joomla\CMS\Helper\ModuleHelper;
 
 // Params
-$fileurl = $params->get("fileurl");
+$fileurl = mb_split("#", $params->get("fileurl"))[0]; // Sometimes we have extra joomlaimage information, this needs to be stripped
 $separator = $params->get("separator");
 $min_char = (int) $params->get("min_char");
 $captions = $params->get("caption");

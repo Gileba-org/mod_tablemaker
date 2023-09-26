@@ -3,6 +3,16 @@
 	<changelog>
 		<element>mod_tablemaker</element>
 		<type>module</type>
+		<version>1.0.2</version>
+		<fix>
+			<item>[J4] Make sure jQuery is loaded when Pagination or Lookup is enabled</item>
+			<item>[J4] Remove joomlaimage information from URL</item>
+			<item>Fix typo in variable name of the new paramater "color of the active pagination item".</item>
+		</fix>
+	</changelog>
+	<changelog>
+		<element>mod_tablemaker</element>
+		<type>module</type>
 		<version>1.0.1</version>
 		<addition>
 			<item>Added option to set the color of the active pagination item (previously only the backgroundcolor could be set).</item>
