@@ -16,6 +16,7 @@
     <server type="extension" priority="1" name="Tablemaker">
       https://gileba.be/updates/mod_tablemaker.xml</server>
   </updateservers>
+  <dlid prefix="download_id=" />
   <files>
     <filename module="mod_tablemaker">mod_tablemaker.php</filename>
     <folder>tmpl</folder>
