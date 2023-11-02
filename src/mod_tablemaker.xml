@@ -6,8 +6,8 @@
   <license>GNU/GPL</license>
   <authorEmail>info@gileba.be</authorEmail>
   <authorUrl>www.gileba.be</authorUrl>
-  <version>1.0.2</version>
-  <creationDate>2023-09-26</creationDate>
+  <version>1.1.0</version>
+  <creationDate>2023-11-02</creationDate>
   <description>This module creates a table from a CSV file. The module reads the content of a CSV
     file and makes an html table for it. Forked from 'Tablemaker for CSV' by Mostafa Shahiri
     (https://github.com/mostafa272/TableMakerforCSV)</description>
@@ -16,11 +16,13 @@
     <server type="extension" priority="1" name="Tablemaker">
       https://gileba.be/updates/mod_tablemaker.xml</server>
   </updateservers>
+  <dlid prefix="download_id=" />
   <files>
     <filename module="mod_tablemaker">mod_tablemaker.php</filename>
     <folder>tmpl</folder>
     <folder>js</folder>
     <folder>language</folder>
+    <folder>install</folder>
   </files>
   <languages folder="language">
     <language tag="en-GB">en-GB/en-GB.mod_tablemaker.ini</language>
@@ -28,6 +30,11 @@
     <language tag="nl-BE">nl-BE/nl-BE.mod_tablemaker.ini</language>
     <language tag="nl-NL">nl-NL/nl-NL.mod_tablemaker.ini</language>
   </languages>
+  <install>
+    <sql>
+      <file driver="mysql" charset="utf8">install/install.sql</file>
+    </sql>
+  </install>
   <config>
     <fields name="params">
       <fieldset name="basic">
