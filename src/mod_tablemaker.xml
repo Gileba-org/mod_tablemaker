@@ -16,11 +16,13 @@
     <server type="extension" priority="1" name="Tablemaker">
       https://gileba.be/updates/mod_tablemaker.xml</server>
   </updateservers>
+  <dlid prefix="download_id=" />
   <files>
     <filename module="mod_tablemaker">mod_tablemaker.php</filename>
     <folder>tmpl</folder>
     <folder>js</folder>
     <folder>language</folder>
+    <folder>install</folder>
   </files>
   <languages folder="language">
     <language tag="en-GB">en-GB/en-GB.mod_tablemaker.ini</language>
@@ -28,6 +30,12 @@
     <language tag="nl-BE">nl-BE/nl-BE.mod_tablemaker.ini</language>
     <language tag="nl-NL">nl-NL/nl-NL.mod_tablemaker.ini</language>
   </languages>
+  <install>
+    <sql>
+      <file driver="mysql" charset="utf8">install/install.sql</file>
+    </sql>
+  </install>
+
   <config>
     <fields name="params">
       <fieldset name="basic">
