@@ -3,6 +3,19 @@
 	<changelog>
 		<element>mod_tablemaker</element>
 		<type>module</type>
+		<version>1.1.0</version>
+		<addition>
+			<item>[J5] Native support for Joomla 5</item>
+			<item>Added support for upgrading from Tablemaker for CSV (opening the module is still required)</item>
+		</addition>
+		<change>
+			<item>Download ID should now be entered in the manifest per Joomla standard (no longer in the Gileba Framework plugin)</item>
+			<item>[J3] Support for Joomla 3.10 is deprecated; Support for Joomla 3.9 and lower is removed</item>
+		</change>
+	</changelog>
+	<changelog>
+		<element>mod_tablemaker</element>
+		<type>module</type>
 		<version>1.0.2</version>
 		<fix>
 			<item>[J4] Make sure jQuery is loaded when Pagination or Lookup is enabled</item>
