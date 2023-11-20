@@ -179,18 +179,36 @@ if (!empty($fileurl)) {
 			}
 		}
 
-		while ($f = fgetcsv($file, 1000, $separator)) {
-			$j++;
-			echo $j == 1 ? "<thead><tr>" : "<tr>";
-			$end = count($f);
-			$filter = new InputFilter($tags, $attribs);
-			for ($i = 0; $i < $end; $i++) {
-				echo $j == 1 ? "<th" . $sort . ">" : "<td>";
-				echo $filter->clean($f[$i], "string");
-				echo $j == 1 ? "</th>" : "</td>";
-			}
-			echo "</tr>";
-			echo $j == 1 ? "</thead><tbody>" : "";
+		switch ($params->get("filetype", "1")) {
+			case "0":
+				while ($f = fgetcsv($file, 0, "\t", '"', "\\")) {
+					$j++;
+					echo $j == 1 ? "<thead><tr>" : "<tr>";
+					$end = count($f);
+					$filter = new InputFilter($tags, $attribs);
+					for ($i = 0; $i < $end; $i++) {
+						echo $j == 1 ? "<th" . $sort . ">" : "<td>";
+						echo $filter->clean($f[$i], "string");
+						echo $j == 1 ? "</th>" : "</td>";
+					}
+					echo "</tr>";
+					echo $j == 1 ? "</thead><tbody>" : "";
+				}
+				break;
+			default:
+				while ($f = fgetcsv($file, 0, $separator, '"', "\\")) {
+					$j++;
+					echo $j == 1 ? "<thead><tr>" : "<tr>";
+					$end = count($f);
+					$filter = new InputFilter($tags, $attribs);
+					for ($i = 0; $i < $end; $i++) {
+						echo $j == 1 ? "<th" . $sort . ">" : "<td>";
+						echo $filter->clean($f[$i], "string");
+						echo $j == 1 ? "</th>" : "</td>";
+					}
+					echo "</tr>";
+					echo $j == 1 ? "</thead><tbody>" : "";
+				}
 		}
 
 		echo "</tbody></table>";
