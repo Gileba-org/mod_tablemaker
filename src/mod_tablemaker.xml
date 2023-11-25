@@ -44,22 +44,24 @@
           description="MOD_TABLEMAKER_SEPARATOR_DESC" />
         <field name="caption" type="textarea" rows="3" cols="40"
           label="MOD_TABLEMAKER_CAPTION_LABEL" description="MOD_TABLEMAKER_CAPTION_DESC" />
+        <field name="sortable" type="radio" default="0" label="MOD_TABLEMAKER_SORTABLE_LABEL"
+            description="MOD_TABLEMAKER_SORTABLE_DESC" class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+          </field>
         <field name="pretext" type="editor" filter="safehtml" label="MOD_TABLEMAKER_PRETEXT_LABEL"
           description="MOD_TABLEMAKER_PRETEXT_DESC" />
         <field name="posttext" type="editor" filter="safehtml" label="MOD_TABLEMAKER_POSTTEXT_LABEL"
           description="MOD_TABLEMAKER_POSTTEXT_DESC" />
+      </fieldset>
+      <fieldset name="LOOKUP">
         <field name="lookup" type="radio" default="0" label="MOD_TABLEMAKER_LOOKUP_LABEL"
-            description="MOD_TABLEMAKER_LOOKUP_DESC" class="btn-group btn-group-yesno">
-            <option value="1">JYES</option>
-            <option value="0">JNO</option>
-          </field>
-        <field name="min_char" type="text" default="1" label="MOD_TABLEMAKER_MINCHAR_LABEL"
-            description="MOD_TABLEMAKER_MINCHAR_DESC" showon="lookup:1" />
-        <field name="sortable" type="radio" default="0" label="MOD_TABLEMAKER_SORTABLE_LABEL"
-          description="MOD_TABLEMAKER_SORTABLE_DESC" class="btn-group btn-group-yesno">
+          description="MOD_TABLEMAKER_LOOKUP_DESC" class="btn-group btn-group-yesno">
           <option value="1">JYES</option>
           <option value="0">JNO</option>
         </field>
+        <field name="min_char" type="text" default="1" label="MOD_TABLEMAKER_MINCHAR_LABEL"
+          description="MOD_TABLEMAKER_MINCHAR_DESC" showon="lookup:1" />
       </fieldset>
       <fieldset name="HTML">
         <field name="allow_html" type="radio" default="0" label="MOD_TABLEMAKER_ALLOW_HTML_LABEL"
