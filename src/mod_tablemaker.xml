@@ -60,6 +60,8 @@
           <option value="1">JYES</option>
           <option value="0">JNO</option>
         </field>
+      </fieldset>
+      <fieldset name="HTML">
         <field name="allow_html" type="radio" default="0" label="MOD_TABLEMAKER_ALLOW_HTML_LABEL"
           description="MOD_TABLEMAKER_ALLOW_HTML_DESC" class="btn-group btn-group-yesno">
           <option value="1">JYES</option>
