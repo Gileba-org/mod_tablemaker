@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" method="upgrade" client="site" version="4.0">
-  <name>Tablemaker</name>
+  <name>Tablemaker<### Pro Pro###></name>
   <author>Gileba</author>
   <copyright>(C) 2022 Gileba; (C) 2018 Mostafa Shahiri</copyright>
   <license>GNU/GPL</license>
@@ -40,6 +40,7 @@
       <fieldset name="basic">
         <field name="fileurl" type="media" preview="no" types="documents" mediatype="csv"
           label="MOD_TABLEMAKER_FILE_LABEL" description="MOD_TABLEMAKER_FILE_DESC" />
+<### Pro
         <field name="filetype" type="radio" default="1" label="MOD_TABLEMAKER_FILETYPE_LABEL"
           description="MOD_TABLEMAKER_FILETYPE_DESC" class="btn-group">
           <option value="1">CSV</option>
@@ -47,6 +48,11 @@
         </field>
         <field name="separator" type="text" default="," label="MOD_TABLEMAKER_SEPARATOR_LABEL"
           description="MOD_TABLEMAKER_SEPARATOR_DESC" showon="filetype:1" maxlength="1" />
+###>
+<### Free
+        <field name="separator" type="text" default="," label="MOD_TABLEMAKER_SEPARATOR_LABEL"
+          description="MOD_TABLEMAKER_SEPARATOR_DESC" maxlength="1" />
+###>
         <field name="caption" type="textarea" rows="3" cols="40"
           label="MOD_TABLEMAKER_CAPTION_LABEL" description="MOD_TABLEMAKER_CAPTION_DESC" />
         <field name="pretext" type="editor" filter="safehtml" label="MOD_TABLEMAKER_PRETEXT_LABEL"
