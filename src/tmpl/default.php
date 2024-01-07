@@ -179,6 +179,7 @@ if (!empty($fileurl)) {
 			}
 		}
 
+<### Pro
 		switch ($params->get("filetype", "1")) {
 			case "0":
 				while ($f = fgetcsv($file, 0, "\t", '"', "\\")) {
@@ -196,6 +197,7 @@ if (!empty($fileurl)) {
 				}
 				break;
 			default:
+###>
 				while ($f = fgetcsv($file, 0, $separator, '"', "\\")) {
 					$j++;
 					echo $j == 1 ? "<thead><tr>" : "<tr>";
@@ -209,7 +211,9 @@ if (!empty($fileurl)) {
 					echo "</tr>";
 					echo $j == 1 ? "</thead><tbody>" : "";
 				}
+<### Pro
 		}
+###>
 
 		echo "</tbody></table>";
 
