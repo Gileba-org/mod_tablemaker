@@ -3,6 +3,21 @@
 	<changelog>
 		<element>mod_tablemaker</element>
 		<type>module</type>
+		<version>1.2.0</version>
+		<addition>
+			<item>[PRO] Support for tab seperated files</item>
+		</addition>
+		<change>
+			<item>Lookup now has its own tab with parameters</item>
+			<item>HTML now has its own tab with parameters</item>
+		</change>
+		<remove>
+			<item>[J3] Remove support for Joomla 3.10</item>
+		</remove>
+	</changelog>
+	<changelog>
+		<element>mod_tablemaker</element>
+		<type>module</type>
 		<version>1.1.0</version>
 		<addition>
 			<item>[J5] Native support for Joomla 5</item>
