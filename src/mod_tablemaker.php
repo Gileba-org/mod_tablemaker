@@ -10,7 +10,7 @@ use Joomla\CMS\Helper\ModuleHelper;
 
 // Params
 $fileurl = mb_split("#", $params->get("fileurl"))[0]; // Sometimes we have extra joomlaimage information, this needs to be stripped
-$separator = $params->get("separator");
+$separator = $params->get("separator", ",");
 $min_char = (int) $params->get("min_char");
 $captions = $params->get("caption");
 $table_style = $params->get("table_style");
