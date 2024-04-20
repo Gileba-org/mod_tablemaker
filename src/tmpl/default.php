@@ -151,7 +151,7 @@ if (!empty($fileurl)) {
 	if (file_exists($fileurl)) {
 		$file = fopen($fileurl, "r");
 		if ($lookup) {
-			echo '<input type="text" id="csvlookup_' .
+			echo '<div class="lookup"><input type="text" id="csvlookup_' .
 				$module->id .
 				'" onkeyup="lookuptable(' .
 				$row_num .
@@ -162,7 +162,7 @@ if (!empty($fileurl)) {
 				")" .
 				'" placeholder="' .
 				Text::_("MOD_TABLEMAKER_SEARCHFOR") .
-				'"><br /><br />';
+				'"></div>';
 		}
 
 		echo '<table class="csvtable' . $moduleclass_sfx;
