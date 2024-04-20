@@ -11,9 +11,15 @@ use Joomla\CMS\Factory;
 use Joomla\CMS\Language\Text;
 use Joomla\Filter\InputFilter;
 
+// Init
+$dataTables = false;
+if ($lookup || $pagination) {
+	$dataTables = true;
+}
+
 // Custom JS
 if ($pagination) {
-	$script = "jQuery('document').ready(function(){pagination(" . $row_num . ", " . $module->id . ");});";
+	$script = "jQuery('document').ready(function(){pagination(" . $row_num . ", " . $module->id . ", $lookup);});";
 }
 
 // Custom CSS
@@ -120,12 +126,10 @@ if ($pagination) {
 if ($styling) {
 	$document->addStyleDeclaration($style);
 }
-if ($lookup || $pagination) {
-	// TODO: Remove check as it's no longer needed once we drop support for J3
-	if (JVERSION >= 4) {
-		$wa = $document->getWebAssetManager();
-		$wa->useScript("jquery-noconflict");
-	}
+if ($dataTables) {
+	$wa = $document->getWebAssetManager();
+	$wa->useScript("jquery-noconflict");
+
 	// TODO: Should go into the WebAsset once we drop support for J3
 	$document->addScript("modules/mod_tablemaker/js/jquery.dataTables.min.js");
 }
@@ -163,7 +167,7 @@ if (!empty($fileurl)) {
 
 		echo '<table class="csvtable' . $moduleclass_sfx;
 		echo $sortable ? " sortable" : "";
-		echo $lookup ? '" id="csvtable_' . $module->id . '"' : "";
+		echo $dataTables ? '" id="csvtable_' . $module->id . '"' : "";
 		echo '">';
 
 		$j = 0;
