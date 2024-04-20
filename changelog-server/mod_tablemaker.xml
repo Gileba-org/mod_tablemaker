@@ -3,6 +3,17 @@
 	<changelog>
 		<element>mod_tablemaker</element>
 		<type>module</type>
+		<version>1.2.1</version>
+		<fix>
+			<item>Pagination was not working</item>
+		</fix>
+		<change>
+			<item>Code optimalisations</item>
+		</change>
+	</changelog>
+	<changelog>
+		<element>mod_tablemaker</element>
+		<type>module</type>
 		<version>1.2.0</version>
 		<addition>
 			<item>[PRO] Support for tab seperated files</item>

@@ -4,10 +4,11 @@
 		<description>A module to create html table from CSV file</description>
 		<element>mod_tablemaker</element>
 		<type>module</type>
-		<version>1.2.0</version>
+		<version>1.2.1</version>
 		<infourl title="Tablemaker">https://github.com/Gileba-org/mod_tablemaker</infourl>
 		<changelogurl>https://gileba.be/changelogs/mod_tablemaker.xml</changelogurl>
 		<client>site</client>
+		<sha256>a345195096b1fe15759c647e07428764a2b93c617f133530480617b8e5833991</sha256>
 		<downloads>
 			<downloadurl type="full" format="zip">
 				https://gileba.be/index.php?option=com_osmembership&amp;task=download_update_package&amp;document_id=3</downloadurl>
