@@ -3,6 +3,14 @@
 	<changelog>
 		<element>mod_tablemaker</element>
 		<type>module</type>
+		<version>1.2.2</version>
+		<fix>
+			<item>Better support for HTML Entities (but make sure you save your CSV in the appropriate character set, e.g. UTF-8)</item>
+		</fix>
+	</changelog>
+	<changelog>
+		<element>mod_tablemaker</element>
+		<type>module</type>
 		<version>1.2.1</version>
 		<fix>
 			<item>Pagination was not working</item>
