@@ -148,6 +148,7 @@ if (!empty($pretext)) {
 }
 
 if (!empty($fileurl)) {
+	$fileurl = str_replace("%20"," ",$fileurl);
 	if (file_exists($fileurl)) {
 		$file = fopen($fileurl, "r");
 		if ($lookup) {
