@@ -3,6 +3,18 @@
 	<changelog>
 		<element>mod_tablemaker</element>
 		<type>module</type>
+		<version>1.2.3</version>
+		<fix>
+			<item>Process filenames with a space</item>
+			<item>Fix lookup in table</item>
+		</fix>
+		<note>
+			<item>Lookup, pagination and sorting do not work together properly. This will be looked into for a future major new version. Until then, only use one of these functions at a time.</item>
+		</note>
+	</changelog>
+	<changelog>
+		<element>mod_tablemaker</element>
+		<type>module</type>
 		<version>1.2.2</version>
 		<fix>
 			<item>Better support for HTML Entities (but make sure you save your CSV in the appropriate character set, e.g. UTF-8)</item>
